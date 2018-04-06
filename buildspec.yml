@@ -6,6 +6,7 @@ phases:
       - echo Install dependencies ...
       - pip install -r requirements-docs.txt
       - pip install doc2dash
+      - pip install .
   pre_build:
     commands:
       - echo Pre build ...
