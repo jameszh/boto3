@@ -23,5 +23,5 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - docs/html.docset/**/*
+    - docs/boto3.docset/**/*
 
