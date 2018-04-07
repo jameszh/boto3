@@ -4,7 +4,6 @@ phases:
   install:
     commands:
       - echo Install dependencies ...
-      - yum install -y tree
   pre_build:
     commands:
       - echo Pre build ...
@@ -14,8 +13,7 @@ phases:
   build:
     commands:
       - echo Build ...
-      - ls -al
-      - tree
+      - ls -al source
   post_build:
     commands:
       - echo Entered the post_build phase...
