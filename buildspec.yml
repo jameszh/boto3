@@ -4,19 +4,14 @@ phases:
   install:
     commands:
       - echo Install dependencies ...
-      - pip install -r requirements-docs.txt
-      - pip install doc2dash
-      - pip install .
   pre_build:
     commands:
       - echo Pre build ...
       - cd docs
-      - make html
   build:
     commands:
       - echo Build ...
-      - echo Build started on `date`
-      - doc2dash  build/html -f -v
+      - ls -al
   post_build:
     commands:
       - echo Entered the post_build phase...
