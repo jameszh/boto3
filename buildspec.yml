@@ -4,7 +4,7 @@ phases:
   install:
     commands:
       - echo Install dependencies ...
-      - apt-get install -y tree
+      - yum install -y tree
   pre_build:
     commands:
       - echo Pre build ...
