@@ -16,7 +16,7 @@ phases:
     commands:
       - echo Build ...
       - echo Build started on `date`
-      - doc2dash  build/html -f -v
+      - doc2dash -n boto3 build/html -f -v
   post_build:
     commands:
       - echo Entered the post_build phase...
