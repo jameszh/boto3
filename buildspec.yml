@@ -4,6 +4,7 @@ phases:
   install:
     commands:
       - echo Install dependencies ...
+      - apt-get install tree
   pre_build:
     commands:
       - echo Pre build ...
@@ -14,6 +15,7 @@ phases:
     commands:
       - echo Build ...
       - ls -al
+      - tree
   post_build:
     commands:
       - echo Entered the post_build phase...
