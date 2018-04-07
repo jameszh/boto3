@@ -4,16 +4,19 @@ phases:
   install:
     commands:
       - echo Install dependencies ...
+      - pip install -r requirements-docs.txt
+      - pip install doc2dash
+      - pip install .
   pre_build:
     commands:
       - echo Pre build ...
       - cd docs
-      - mkdir -p build/html
-      - echo "text" > build/html/output.txt
+      - make html
   build:
     commands:
       - echo Build ...
-      - ls -al source
+      - echo Build started on `date`
+      - doc2dash  build/html -f -v
   post_build:
     commands:
       - echo Entered the post_build phase...
@@ -21,4 +24,3 @@ phases:
 artifacts:
   files:
     - docs/build/html/**/*
-  discard-paths: yes
