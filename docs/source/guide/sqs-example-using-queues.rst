@@ -28,26 +28,17 @@ The Scenario
 In this example, Python code is used to work with queues. The code uses the AWS SDK for Python to use 
 queues using these methods of the AWS.SQS client class:
 
-* `list_queues <https://boto3.readthedocs.io/en/latest/reference/services/sqs.html#SQS.Client.list_queues>`_.
+* `list_queues <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html#SQS.Client.list_queues>`_.
 
-* `create_queue <https://boto3.readthedocs.io/en/latest/reference/services/sqs.html#SQS.Client.create_queue>`_.
+* `create_queue <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html#SQS.Client.create_queue>`_.
 
-* `get_queue_url <https://boto3.readthedocs.io/en/latest/reference/services/sqs.html#SQS.Client.get_queue_url>`_.
+* `get_queue_url <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html#SQS.Client.get_queue_url>`_.
 
-* `delete_queue <https://boto3.readthedocs.io/en/latest/reference/services/sqs.html#SQS.Client.delete_queue>`_.
+* `delete_queue <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html#SQS.Client.delete_queue>`_.
 
 For more information about Amazon SQS messages, see 
 `How Queues Work <http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-how-it-works.html>`_ 
 in the *Amazon Simple Queue Service Developer Guide*.
-
-All the example code for the Amazon Web Services (AWS) SDK for Python is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/python/example_code>`_.
-
-Prerequisite Tasks
-==================
-
-To set up and run this example, you must first complete this task:
-
-* Configure your AWS credentials, as described in :doc:`quickstart`.
 
 List Your Queues
 ================
@@ -55,7 +46,7 @@ List Your Queues
 The example below shows how to:
  
 * List queues using 
-  `list_queues <https://boto3.readthedocs.io/en/latest/reference/services/sqs.html#SQS.Client.list_queues>`_.
+  `list_queues <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html#SQS.Client.list_queues>`_.
   
 Example
 -------
@@ -71,14 +62,16 @@ Example
     response = sqs.list_queues()
 
     print(response['QueueUrls'])
- 
+
+.. _aws-boto3-sqs-create-queue:
+
 Create a Queue
 ==============
 
 The example below shows how to:
  
 * Create a queue using 
-  `create_queue <https://boto3.readthedocs.io/en/latest/reference/services/sqs.html#SQS.Client.create_queue>`_.
+  `create_queue <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html#SQS.Client.create_queue>`_.
   
 Example
 -------
@@ -107,7 +100,7 @@ Get the URL for a Queue
 The example below shows how to:
  
 * Get the URL for a queue using 
-  `get_queue_url <https://boto3.readthedocs.io/en/latest/reference/services/sqs.html#SQS.Client.get_queue_url>`_.
+  `get_queue_url <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html#SQS.Client.get_queue_url>`_.
   
 Example
 -------
@@ -130,7 +123,7 @@ Delete a Queue
 The example below shows how to:
  
 * Delete a queue using 
-  `delete_queue <https://boto3.readthedocs.io/en/latest/reference/services/sqs.html#SQS.Client.delete_queue>`_.
+  `delete_queue <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html#SQS.Client.delete_queue>`_.
   
 Example
 -------
@@ -144,6 +137,3 @@ Example
 
     # Delete SQS queue
     sqs.delete_queue(QueueUrl='SQS_QUEUE_URL')
-
-
- 

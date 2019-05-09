@@ -23,26 +23,22 @@ The Scenario
 In this example, Python code is used to manage visibility timeout. The code uses the SDK for Python 
 to manage visibility timeout by using this method of the AWS.SQS client class:
 
-* `set_queue_attributes <https://boto3.readthedocs.io/en/latest/reference/services/sqs.html#SQS.Client.set_queue_attributes>`_.
+* `set_queue_attributes <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html#SQS.Client.set_queue_attributes>`_.
 
 For more information about Amazon SQS visibility timeout, see 
 `Visibility Timeout <http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html>`_ 
 in the *Amazon Simple Queue Service Developer Guide*.
-
-All the example code for the Amazon Web Services (AWS) SDK for Python is available `here on GitHub <https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/python/example_code>`_.
 
 Prerequisite Tasks
 ==================
 
 To set up and run this example, you must first complete these tasks:
 
-* Configure your AWS credentials, as described in :doc:`quickstart`.
+* Create an Amazon SQS queue. For an example of creating an Amazon SQS 
+  queue, see :ref:`aws-boto3-sqs-create-queue`.
 
-* Create an Amazon SQS queue. For an example of creating a queue, see 
-  `Using Queues in Amazon SQS <http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/sqs-examples-using-queues.html>`_.
-
-* Send a message to the queue. For an example of sending a message to a queue, see 
-  `Sending and Receiving Messages in Amazon SQS <http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/sqs-examples-send-receive-messages.html>`_.
+* Send a message to the queue. For an example of sending a message to a 
+  queue, see :ref:`aws-boto3-sqs-send-message`.
 
 Change the Visibility Timeout
 =============================
@@ -50,7 +46,7 @@ Change the Visibility Timeout
 The example below shows how to:
  
 * Change the visibility timeout using 
-  `set_queue_attributes <https://boto3.readthedocs.io/en/latest/reference/services/sqs.html#SQS.Client.set_queue_attributes>`_.
+  `set_queue_attributes <https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html#SQS.Client.set_queue_attributes>`_.
   
   Example
 -------
@@ -83,6 +79,6 @@ The example below shows how to:
     sqs.change_message_visibility(
         QueueUrl=queue_url,
         ReceiptHandle=receipt_handle,
-        VisibilityTimeout=36000
+        VisibilityTimeout=20
     )
     print('Received and changed visibility timeout of message: %s' % message)
